@@ -1,0 +1,59 @@
+body{
+    background-color: rgb(29, 29, 29);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif,
+
+}
+/* Menu Lateral */
+#menu{
+    background-color: rgb(165, 42, 42);
+    width: 250px;
+    height: 100vh;
+    border-radius: 5px;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+#menu h1{
+    color: black;
+    text-align: center;
+}
+#menu p{
+    color: black;
+    text-align: center;
+    display: block;
+    font-style: italic;
+}
+#menu a{
+    color: rgb(185, 185, 185);
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: black;
+    border-radius: 10px;
+}
+#menu a:hover{
+    background-color: rgb(255, 255, 255);
+    font-style: italic;
+    color: rgb(255, 204, 128);
+}
+#conteudo{
+    margin-left: 310px;
+    padding: 20px;
+}
+.secao{
+    background-color: black;
+    border-left: 6px solid rgb(165, 42, 42);
+    border-radius: 10px;
+    color: rgb(185, 185, 185);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.secao:hover{
+    background-color: rgb(255, 255, 255);
+    font-style: italic;
+    color: rgb(255, 204, 128);
+    border-left: 6px solid rgb(255, 204, 128);
+}

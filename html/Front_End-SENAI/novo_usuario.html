@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENAI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    
+    <style>
+    /* SIDEBAR NO CSS */
+        .sidebar {
+            width: 280px;
+            min-height: 100vh;
+            background-color: #ffffff; 
+        }
+        .nav-link:hover {
+        background-color: #ffffff; 
+        border-radius: 5px; 
+        transition: 0.3s; /* Faz a cor aparecer de forma suave */
+        color: rgb(61, 61, 61); 
+        border-left: 6px solid #143f8f;
+        }
+        .sidebar {
+            width: 280px;
+            min-height: 100vh; 
+            background-color: #ffffff; 
+        }
+        .nav-link{
+            color: rgb(100, 100, 102); 
+            font-family: Arial,;
+            margin: 5px;
+            border-left: 6px solid rgba(236, 80, 8, 0.849);
+            background-color: #f5eee5ea; 
+        }
+        /* Muda a cor do fundo e do texto do link ativo */
+        .nav-pills .nav-link.active {
+        background-color: #143f8f;
+        color: #FFFFFF; 
+        border-left: 6px solid #143f8f;
+        }
+    /* FIM DA SIDEBAR */
+        .body { 
+            background-image: url(img/backedit3.png); 
+            background-size: cover;           
+            background-position: center;      
+            background-repeat: no-repeat;     
+            background-attachment: fixed;
+            background-color: #f5eee5ea; 
+            
+        }
+        .form-label {
+        color: #ffffff !important; 
+        }
+    </style>
+</head>
+<body class="body">
+
+    <!-- Wrapper Principal (Flexbox) -->
+    <div class="d-flex">
+        
+        <!-- INÍCIO DA BARRA LATERAL -->
+        <div class="sidebar p-3 d-flex flex-column">
+            <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <img src="img/logo.png" alt="Logo SENAI" width="150">
+            </a>
+            <hr>
+            
+            <!-- Menus -->
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link fw-semibold" >
+                        <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="equipamentos.html" class="nav-link fw-semibold">
+                        <i class="bi bi-pc-display me-2"></i> Equipamentos
+                    </a>
+                </li>
+                <li>
+                    <a href="usuario.html" class="nav-link active fw-semibold" aria-current="page">
+                        <i class="bi bi-people me-2"></i> Usuários
+                    </a>
+                </li>
+                <li>
+                    <a href="emprestimos.html" class="nav-link fw-semibold">
+                        <i class="bi bi-arrow-left-right me-2"></i> Empréstimos
+                    </a>
+                </li>
+                <li>
+                    <a href="historicos.html" class="nav-link fw-semibold">
+                        <i class="bi bi-clock-history me-2"></i> Históricos
+                    </a>
+                </li>
+            </ul> 
+            <hr>
+            <div class="p-3 border-top bg-light rounded m-2">
+    <div class="form-check form-switch d-flex align-items-center justify-content-between p-0 m-0">
+        <label class="form-check-label small fw-semibold text-muted mb-0" for="switchTema">
+            Modo Escuro
+        </label>
+        <input class="form-check-input m-0 cursor-pointer" type="checkbox" id="switchTema" style="width: 2.5em; height: 1.25em;">
+    </div>
+</div>
+            
+        </div>
+        <!-- FIM DA BARRA LATERAL -->
+        <!-- INÍCIO DA ÁREA DE CONTEÚDO PRINCIPAL (NOVO USUÁRIO) -->
+<main class="flex-grow-1 p-4" style="min-height: 100vh;">
+    
+    <h2 class="mb-4" style="color: #143f8f; font-weight: bold; font-style: italic;">NOVO USUÁRIO</h2>
+
+    <!-- Container Laranja do Formulário -->
+    <div class="p-4 rounded shadow-sm" style="background-color: rgb(236, 80, 8);">
+        <form>
+            <!-- Linha 1: Nome, Matrícula e Tipo -->
+            <div class="row g-3 mb-3">
+                <div class="col-md-5">
+                    <label class="form-label text-white small mb-1">Nome</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label text-white small mb-1">Matrícula</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label text-white small mb-1">Tipo</label>
+                    <select class="form-select">
+                        <option value="Aluno" selected>Aluno</option>
+                        <option value="Instrutor">Instrutor</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Linha 2: E-mail e Telefone -->
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label class="form-label text-white small mb-1">E-mail</label>
+                    <input type="email" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label text-white small mb-1">Telefone</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+
+            <!-- Linha 3: Observação -->
+            <div class="mb-4">
+                <label class="form-label text-white small mb-1">Observação</label>
+                <textarea class="form-control" rows="4"></textarea>
+            </div>
+
+            <!-- Botões alinhados à esquerda -->
+            <div class="d-flex gap-2">
+                <!-- Botão azul como no protótipo da página 5 do PDF -->
+                <button type="submit" class="btn px-4" style="background-color: #143f8f; color: #ffffff;">Salvar</button>
+                <a href="usuario.html" class="btn btn-secondary px-4">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</main>
+<!-- FIM DA ÁREA DE CONTEÚDO PRINCIPAL -->
+
+        
+    </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+

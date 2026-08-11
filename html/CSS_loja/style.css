@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgba(155, 155, 155, 0.918);
+}
+/* Cabeçalho */
+header{
+    background-color: rgb(255, 255, 255);
+}
+.logo{
+    width: 270px;
+}
+.topo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+nav{
+    display:flex;
+    gap:20px;
+}
+nav a{
+    text-decoration:none;
+    color:rgb(255, 255, 255);
+    padding:10px 15px;
+    border-radius:5px;
+    background-color: rgb(77,77,77);
+    margin: 10px;
+}
+header p{
+    text-align:center;
+}
+nav a:hover{
+    background-color:rgb(236, 236, 236);
+}
+header h1{
+    padding: 14px;
+    color: rgb(77,77,77);
+    font-family: 'Times New Roman', Times, serif; 
+}
+header p{
+    background-color: rgb(77, 77, 77);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
+}
+/* FIm cabeçalho */
+.card img{
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+}
+footer{
+    background-color: rgb(97, 97, 97);
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    margin:auto;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+footer p{
+    padding: 10px;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+/* Espaçamento entre duas caixas */
+    gap: 25px; 
+    padding: 30px;
+    max-width: 1300px;
+    margin: auto;
+}
+.card{
+    width: 300px;
+    border-radius: 10px;
+    background-color: rgb(77, 77, 77);
+    overflow: hidden;
+    padding-bottom: 20px;
+    color: white;
+}
+.card:hover{
+    transform: translateY(-5px);
+    background-color: rgb(236, 236, 236);
+    color: black;
+}
+main button{
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 4vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-style: oblique;
+    border: none;
+
+}
+.card h2{
+    padding: 15px;
+    color: rgb(39, 39, 39);
+    text-align: center;
+}
+.card p{
+    padding: 0 15px 15px;
+}
+main button:hover{
+    background-color: rgb(77, 77, 77);
+    color: white;
+    font-style: normal;
+    cursor: pointer;
+}
+button a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: block;
+    width: 100%;
+    height: 60%;
+}
+

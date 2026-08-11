@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENAI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    
+    <style>
+    /* SIDEBAR NO CSS */
+        .sidebar {
+            width: 280px;
+            min-height: 100vh; /* Ocupa 100% da altura da tela */
+        }
+        .nav-link:hover {
+        background-color: #ffffff; 
+        border-radius: 5px; 
+        transition: 0.3s; /* Faz a cor aparecer de forma suave */
+        color: rgb(61, 61, 61); 
+        border-left: 6px solid #143f8f;
+        }
+        .sidebar {
+            width: 280px;
+            min-height: 100vh; 
+            background-color: #ffffff; 
+        }
+        .nav-link{
+            color: rgb(100, 100, 102); 
+            font-family: Arial,;
+            margin: 5px;
+            border-left: 6px solid rgba(236, 80, 8, 0.849);
+            background-color: #f5eee5ea; 
+        }
+        /* Muda a cor do fundo e do texto do link ativo */
+        .nav-pills .nav-link.active {
+        background-color: #143f8f;
+        color: #FFFFFF; 
+        border-left: 6px solid #143f8f;
+        }
+    /* FIM DA SIDEBAR */
+        .body { 
+            background-image: url(img/backedit5.png); /* Caminho da imagem de fundo */
+            background-size: cover;           /* Cobre toda a área */
+            background-position: center;      /* Centraliza a imagem */
+            background-repeat: no-repeat;     /* Não repete a imagem */
+            background-attachment: fixed;
+            background-color: #f5eee5ea; 
+            
+        }
+    /* DASHBOARD */
+        .card {
+        border-radius: 0.8rem; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+        border: none; 
+        color: rgb(100, 100, 102); 
+        }
+    </style>
+</head>
+<body class="body">
+
+    <!-- Wrapper Principal (Flexbox) -->
+    <div class="d-flex">
+        
+        <!-- INÍCIO DA BARRA LATERAL -->
+        <div class="sidebar p-3 d-flex flex-column">
+            <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <img src="img/logo.png" alt="Logo SENAI" width="150">
+            </a>
+            <hr>
+            
+            <!-- Menus -->
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link active fw-semibold" aria-current="page" >
+                        <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="equipamentos.html" class="nav-link fw-semibold">
+                        <i class="bi bi-pc-display me-2"></i> Equipamentos
+                    </a>
+                </li>
+                <li>
+                    <a href="usuario.html" class="nav-link fw-semibold">
+                        <i class="bi bi-people me-2"></i> Usuários
+                    </a>
+                </li>
+                <li>
+                    <a href="emprestimos.html" class="nav-link fw-semibold">
+                        <i class="bi bi-arrow-left-right me-2"></i> Empréstimos
+                    </a>
+                </li>
+                <li>
+                    <a href="historicos.html" class="nav-link fw-semibold">
+                        <i class="bi bi-clock-history me-2"></i> Históricos
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <!-- MDOO ESCURO -->
+    <div class="p-3 border-top bg-light rounded m-2">
+    <div class="form-check form-switch d-flex align-items-center justify-content-between p-0 m-0">
+        <label class="form-check-label small fw-semibold text-muted mb-0" for="switchTema">
+            Modo Escuro
+        </label>
+        <input class="form-check-input m-0 cursor-pointer" type="checkbox" id="switchTema" style="width: 2.5em; height: 1.25em;">
+    </div>
+</div>
+        </div>
+        <!-- FIM DA BARRA LATERAL -->
+<!-- INÍCIO DA ÁREA DE CONTEÚDO PRINCIPAL (DASHBOARD ENRIQUECIDO) -->
+<main class="flex-grow-1 p-4" style="min-height: 100vh;">
+    
+    <!-- Cabeçalho -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0" style="color: #143f8f; font-weight: bold; font-style: italic;">DASHBOARD</h2>
+    </div>
+
+    <!-- 1. CARDS DE RESUMO (Grid responsivo ajustado para 4 colunas em telas grandes) -->
+    <div class="row g-3 mb-4">
+        <div class="col-12 col-sm-6 col-xl-3">
+            <div class="p-3 text-white rounded shadow-sm h-100" style="background-color: #0d6efd;">
+                <span class="small opacity-75 fw-semibold">Equipamentos</span>
+                <h1 class="display-5 fw-bold mb-0 mt-2">12</h1>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-3">
+            <div class="p-3 text-white rounded shadow-sm h-100" style="background-color: #198754;">
+                <span class="small opacity-75 fw-semibold">Emprestados</span>
+                <h1 class="display-5 fw-bold mb-0 mt-2">4</h1>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-3">
+            <div class="p-3 text-white rounded shadow-sm h-100" style="background-color: #ffc107;">
+                <span class="small text-dark opacity-75 fw-semibold">Disponíveis</span>
+                <h1 class="display-5 fw-bold mb-0 mt-2 text-dark">7</h1>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-3">
+            <div class="p-3 text-white rounded shadow-sm h-100" style="background-color: #dc3545;">
+                <span class="small opacity-75 fw-semibold">Em atraso</span>
+                <h1 class="display-5 fw-bold mb-0 mt-2">1</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. LINHA INTERMEDIÁRIA: GRÁFICO + ÚLTIMOS EMPRÉSTIMOS -->
+    <div class="row g-4 mb-4">
+        
+        <!-- Gráfico de Pizza / Rosca -->
+        <div class="col-12 col-lg-5">
+            <div class="bg-white p-4 rounded shadow-sm h-100">
+                <h5 class="fw-bold mb-3" style="color: #143f8f;">Status dos Equipamentos</h5>
+                <div style="position: relative; height: 260px;" class="d-flex justify-content-center align-items-center">
+                    <canvas id="graficoStatus"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabela: Últimos Empréstimos -->
+        <div class="col-12 col-lg-7">
+            <div class="bg-white p-4 rounded shadow-sm h-100">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="fw-bold mb-0" style="color: #143f8f;">Últimos Empréstimos</h5>
+                    <a href="emprestimos.html" class="btn btn-sm" style="background-color: #143f8f; color: white; font-weight: bold;">Ver Todos</a>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-light">
+                            <tr class="small text-muted">
+                                <th>Patrimônio</th>
+                                <th>Usuário</th>
+                                <th>Data</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="small">
+                            <tr>
+                                <td>000</td>
+                                <td>felipe</td>
+                                <td>28/07/2026</td>
+                                <td><span class="badge bg-success">Devolvido</span></td>
+                            </tr>
+                            <tr>
+                                <td>102</td>
+                                <td>maria.silva</td>
+                                <td>30/07/2026</td>
+                                <td><span class="badge bg-warning text-dark">Em Aprov.</span></td>
+                            </tr>
+                            <tr>
+                                <td>085</td>
+                                <td>joao.pedro</td>
+                                <td>31/07/2026</td>
+                                <td><span class="badge bg-danger">Atrasado</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 3. LINHA INFERIOR: EQUIPAMENTOS RECENTES -->
+    <div class="bg-white p-4 rounded shadow-sm mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="fw-bold mb-0" style="color: #143f8f;">Equipamentos Adicionados Recente</h5>
+            <a href="equipamentos.html" class="btn btn-sm" style="background-color: #143f8f; color: white; font-weight: bold;">Gerenciar Equipamentos</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped align-middle mb-0">
+                <thead class="cabecalho-custom">
+                    <tr>
+                        <th>Patrimônio</th>
+                        <th>Tipo</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody class="small">
+                    <tr>
+                        <td>105</td>
+                        <td>Notebook</td>
+                        <td>Dell</td>
+                        <td>Latitude 3420</td>
+                        <td><span class="badge bg-info text-dark">Disponível</span></td>
+                    </tr>
+                    <tr>
+                        <td>104</td>
+                        <td>Projetor</td>
+                        <td>Epson</td>
+                        <td>PowerLite E20</td>
+                        <td><span class="badge bg-info text-dark">Disponível</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</main>
+<!-- FIM DA ÁREA DE CONTEÚDO PRINCIPAL -->
+
+<!-- Script Chart.js para ativar o gráfico -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const ctx = document.getElementById('graficoStatus').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Emprestados', 'Disponíveis', 'Em Atraso'],
+                datasets: [{
+                    data: [4, 7, 1], // Valores de exemplo
+                    backgroundColor: [
+                        '#198754', // Verde (Emprestados)
+                        '#ffc107', // Amarelo (Disponíveis)
+                        '#dc3545'  // Vermelho (Atrasados)
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+    });
+</script>
+       
+        
+    </div>
+    
+    
+</body>
+</html>
+
+
+

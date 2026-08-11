@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENAI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    
+    <style>
+    /* SIDEBAR NO CSS */
+        .sidebar {
+            width: 280px;
+            min-height: 100vh;
+            background-color: #ffffff; 
+        }
+        .nav-link:hover {
+        background-color: #ffffff; 
+        border-radius: 5px; 
+        transition: 0.3s; /* Faz a cor aparecer de forma suave */
+        color: rgb(61, 61, 61); 
+        border-left: 6px solid #143f8f;
+        }
+        .sidebar {
+            width: 280px;
+            min-height: 100vh; 
+            background-color: #ffffff; 
+        }
+        .nav-link{
+            color: rgb(100, 100, 102); 
+            font-family: Arial,;
+            margin: 5px;
+            border-left: 6px solid rgba(236, 80, 8, 0.849);
+            background-color: #f5eee5ea; 
+        }
+        /* Muda a cor do fundo e do texto do link ativo */
+        .nav-pills .nav-link.active {
+        background-color: #143f8f;
+        color: #FFFFFF; 
+        border-left: 6px solid #143f8f;
+        }
+    /* FIM DA SIDEBAR */
+        .body { 
+            background-image: url(img/backedit.png); 
+            background-size: cover;           
+            background-position: center;      
+            background-repeat: no-repeat;     
+            background-attachment: fixed;
+            background-color: #f5eee5ea; 
+            
+        }
+        .form-label {
+        color: #ffffff !important; 
+        }
+        .cabecalho-custom th {
+            background-color: rgb(236, 80, 8) !important; 
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+<body class="body">
+
+    <!-- Wrapper Principal (Flexbox) -->
+    <div class="d-flex">
+        
+        <!-- INÍCIO DA BARRA LATERAL -->
+        <div class="sidebar p-3 d-flex flex-column">
+            <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <img src="img/logo.png" alt="Logo SENAI" width="150">
+            </a>
+            <hr>
+            
+            <!-- Menus -->
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link fw-semibold" >
+                        <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="equipamentos.html" class="nav-link fw-semibold">
+                        <i class="bi bi-pc-display me-2"></i> Equipamentos
+                    </a>
+                </li>
+                <li>
+                    <a href="usuario.html" class="nav-link fw-semibold">
+                        <i class="bi bi-people me-2"></i> Usuários
+                    </a>
+                </li>
+                <li>
+                    <a href="emprestimos.html" class="nav-link fw-semibold">
+                        <i class="bi bi-arrow-left-right me-2"></i> Empréstimos
+                    </a>
+                </li>
+                <li>
+                    <a href="historicos.html" class="nav-link  active fw-semibold" aria-current="page">
+                        <i class="bi bi-clock-history me-2"></i> Históricos
+                    </a>
+                </li>
+            </ul> 
+            <hr>
+            <div class="p-3 border-top bg-light rounded m-2">
+    <div class="form-check form-switch d-flex align-items-center justify-content-between p-0 m-0">
+        <label class="form-check-label small fw-semibold text-muted mb-0" for="switchTema">
+            Modo Escuro
+        </label>
+        <input class="form-check-input m-0 cursor-pointer" type="checkbox" id="switchTema" style="width: 2.5em; height: 1.25em;">
+    </div>
+</div>
+            
+        </div>
+        <!-- FIM DA BARRA LATERAL -->
+       <!-- INÍCIO DA ÁREA DE CONTEÚDO PRINCIPAL (HISTÓRICO) -->
+<main class="flex-grow-1 p-4" style="min-height: 100vh;">
+    
+    <!-- Cabeçalho: Título -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0" style="color: #143f8f; font-weight: bold; font-style: italic;">HISTÓRICO</h2>
+    </div>
+
+    <!-- Container Branco para a Tabela e Controles -->
+    <div class="bg-white p-4 rounded shadow-sm">
+        
+        <!-- Controles: Exibir e Pesquisar -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="d-flex align-items-center text-muted">
+                <span class="me-2">Exibir</span>
+                <select class="form-select form-select-sm w-auto me-2">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                </select>
+                <span>resultados por página</span>
+            </div>
+            <div class="d-flex align-items-center text-muted">
+                <span class="me-2">Pesquisar</span>
+                <input type="text" class="form-control form-control-sm" placeholder="Buscar registros">
+            </div>
+        </div>
+
+        <!-- Tabela de Histórico -->
+        <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle border">
+                <thead class="cabecalho-custom">
+                    <tr>
+                        <th>Data &#9650;</th>
+                        <th>Patrimônio &#9670;</th>
+                        <th>Usuário &#9670;</th>
+                        <th>Ação &#9670;</th>
+                        <th>Descrição &#9670;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Exemplo 1 baseado no PDF -->
+                    <tr>
+                        <td>28/07/2026<br><small class="text-muted">15:26</small></td>
+                        <td>000</td>
+                        <td>felipe</td>
+                        <td>
+                            <span class="badge bg-primary text-uppercase px-2 py-1">Empréstimo</span>
+                        </td>
+                        <td>Notebook 000 emprestado para felipe</td>
+                    </tr>
+                    <!-- Exemplo 2 baseado no PDF -->
+                    <tr>
+                        <td>28/07/2026<br><small class="text-muted">15:45</small></td>
+                        <td>000</td>
+                        <td>felipe</td>
+                        <td>
+                            <span class="badge bg-primary text-uppercase px-2 py-1">Devolução</span>
+                        </td>
+                        <td>Notebook patrimônio 000 devolvido por felipe</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Rodapé: Info e Paginação -->
+        <div class="d-flex justify-content-between align-items-center mt-3 text-muted">
+            <small>Mostrando de 1 até 2 de 2 registros</small>
+            <nav>
+                <ul class="pagination pagination-sm mb-0">
+                    <li class="page-item disabled"><a class="page-link text-muted" href="#">Anterior</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item disabled"><a class="page-link text-muted" href="#">Próximo</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </div>
+</main>
+<!-- FIM DA ÁREA DE CONTEÚDO PRINCIPAL -->
+        
+    </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+

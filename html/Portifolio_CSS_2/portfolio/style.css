@@ -1,0 +1,74 @@
+body{
+    background-image: url(e\ pitolomeu.png);
+    background-size: cover;           /* Cobre toda a área */
+    background-position: center;      /* Centraliza a imagem */
+    background-repeat: no-repeat;     /* Não repete a imagem */
+    background-attachment: fixed;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif,
+
+}
+/* Menu Lateral */
+#menu{
+    background-color: rgba(165, 42, 42, 0.753);
+    width: 250px;
+    height: 100vh;
+    border-radius: 5px;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+#menu h1{
+    color: black;
+    text-align: center;
+}
+#menu p{
+    color: black;
+    text-align: center;
+    display: block;
+    font-style: italic;
+}
+#menu a{
+    color: rgb(185, 185, 185);
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: black;
+    border-radius: 10px;
+}
+#menu a:hover{
+    background-color: rgba(255, 229, 229, 0.863);
+    font-style: italic;
+    color: rgb(0, 0, 0);
+}
+#conteudo{
+    margin-left: 310px;
+    padding: 20px;
+}
+.secao{
+    background-color: black;
+    border-left: 6px solid rgb(165, 42, 42);
+    border-radius: 10px;
+    color: rgb(185, 185, 185);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.secao:hover{
+    background-color: rgba(255, 229, 229, 0.712);
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    border-left: 6px solid rgb(0, 0, 0);
+    
+}
+#cont a{
+    font-style: italic;
+    color: rgb(185, 185, 185);
+    text-decoration: none;
+}
+#cont a:hover{
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
