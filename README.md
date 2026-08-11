@@ -1,30 +1,45 @@
-# Estudos - ADS
+﻿# 📚 Estudos - ADS (SENAI)
 
-Repositório central de estudos do curso de **Análise e Desenvolvimento de Sistemas (SENAI)**.
+Repositório central de estudos do curso de **Análise e Desenvolvimento de Sistemas** no SENAI.
 
-Aqui ficam organizados os exercícios, anotações e materiais das aulas, separados por matéria.
+Aqui ficam organizados todos os exercícios, anotações e projetos de aula — um repo único para toda a jornada acadêmica.
 
-## Estrutura
+## 📁 Estrutura
 
-- `html/` - HTML e estrutura de páginas
-- `css/` - Estilização e layout
-- `javascript/` - Lógica no navegador
-- `python/` - Lógica de programação em Python
-- `sql/` - Banco de dados e consultas
-- `git/` - Versionamento e Git/GitHub
-- `logica/` - Algoritmos e raciocínio lógico
+| Pasta | Conteúdo |
+|-------|----------|
+| `html/` | HTML, CSS, Bootstrap e portfólios de aula |
+| `python/` | Lógica, loops, condicionais, POO, tkinter, Streamlit |
+| `git/` | Estudos e testes de Git/GitHub |
+| `logica/` | Fluxogramas e raciocínio lógico |
+| `geral/` | Atividades e arquivos diversos |
 
-## Regras do repo
+## 📌 Regras de organização
 
-- Uma pasta por matéria; uma subpasta por aula/tema.
-- Nada de arquivo solto na raiz.
-- Mensagens de commit claras: `Aula: <assunto>`.
-- Revisar e organizar uma vez por semana.
+- **Uma pasta por matéria** — nada de arquivo solto na raiz.
+- **Uma pasta por aula/tema** dentro da matéria.
+- **Commits descritivos** — ex: `Aula: estruturas condicionais em Python`.
+- **Toda aula nova** vai para a pasta correspondente deste repo.
 
-## Projetos
+## 🚀 Como usar
 
-Os projetos pessoais ficam em repositórios próprios no meu perfil.
+```bash
+git clone https://github.com/LuizNostradamus/estudos-ads.git
+cd estudos-ads
+# coloque os arquivos da aula na pasta certa
+git add .
+git commit -m "Aula: [assunto]"
+git push
+```
+
+## 🧰 Stack em aprendizado
+
+- HTML, CSS, JavaScript
+- Python (básico ao avançado)
+- Git e GitHub
+- SQL e banco de dados
+- Lógica de programação
 
 ---
 
-Perfil: https://github.com/LuizNostradamus
+Feito com 💻 durante o curso de ADS no SENAI.
